@@ -1,0 +1,129 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    font-family: 'Segoe UI', sans-serif;
+    overflow: hidden; /* ngăn tràn màn hình */
+}
+
+/* Sidebar */
+.main-sidebar {
+    width: 250px;
+    background-color: #343a40;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow-y: auto;
+    z-index: 100;
+}
+
+/* Sidebar links */
+.main-sidebar a {
+    color: #c2c7d0;
+    padding: 12px 20px;
+    display: block;
+    text-decoration: none;
+}
+
+.main-sidebar a:hover,
+.main-sidebar .active {
+    background-color: #007bff;
+    color: white;
+}
+
+/* Wrapper (to the right of sidebar) */
+.main-wrapper {
+    margin-left: 250px;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+    width: calc(100% - 250px);
+}
+
+/* Navbar */
+.navbar {
+    height: 70px;
+    background: #fff;
+    border-bottom: 1px solid #007bff;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+    z-index: 1000;
+    position: sticky;
+    top: 0;
+}
+
+/* Main content area */
+.main-content {
+    flex: 1;
+    padding: 20px;
+    overflow: auto;
+    background-image: url('https://img5.thuthuatphanmem.vn/uploads/2021/12/06/hinh-nen-may-tinh-mau-tim-nhat_084501443.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Footer */
+.main-footer {
+    height: 50px;
+    background: #f8f9fa;
+    text-align: center;
+    line-height: 50px;
+    border-top: 1px solid #ddd;
+    flex-shrink: 0;
+}
+
+/* TABLE FIX */
+.table-responsive {
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    background-color: white;
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 10px;
+    min-width: 800px; /* tránh co bảng */
+}
+
+table th, table td {
+    border: 1px solid #ccc;
+    padding: 8px 12px;
+    text-align: left;
+    white-space: nowrap;
+    vertical-align: middle;
+}
+
+table th {
+    background-color: #f1f1f1;
+}
+
+/* DataTable fix */
+#users-table {
+    width: 100% !important;
+    table-layout: auto;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #999;
+    border-radius: 10px;
+}
